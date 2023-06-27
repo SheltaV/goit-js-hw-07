@@ -15,13 +15,4 @@ const galleryList = galleryItems.map(({ preview, original, description }) => {
 
 gallery.innerHTML = galleryList;
 
-gallery.addEventListener('click', onClick);
-
-function onClick(event) {
-    event.preventDefault();
-    if (!event.target.classList.contains('gallery__image')) {
-        return;
-    }
-    let lightbox = new SimpleLightbox('.gallery__link', { captionsData: `alt`, captionDelay: 250 });
-    lightbox.open()
-}
+new SimpleLightbox('.gallery__link', { captionsData: `alt`, captionDelay: 250 });

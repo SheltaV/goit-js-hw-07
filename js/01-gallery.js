@@ -36,7 +36,7 @@ function onEscape(event) {
  if (event.code === 'Escape') {
    instance.close()
    document.removeEventListener('keydown', onEscape)
-  //  console.log(document.removeEventListener('keydown', onEscape))
+   console.log(event)
  }
 }
 }
